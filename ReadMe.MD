@@ -33,9 +33,6 @@ The Y_train file has the activities corresponding to the 2947 rows.
 #putting it all together
 Train and Test files are merged together and appended to form a dataset with 10299 rows.
 The dataset is subsetted to have only the mean and the standard deviation variable.
-
 Finally the Mean of the subsetted variables is calculated and put into the tidy_means file.
-subset_all_mean_std_vars= all_withactivity[,c('activity','subject_id',varnames$newvarname[varnames$mean_std_var==TRUE])]
-tidy_means=aggregate(.~activity + subject_id, data=subset_all_mean_std_vars,FUN = mean,na.rm = TRUE, na.action="na.pass") 
 The final dataset has 180 observations and 68 variables. The final dataset is written to the working directory as tidy.txt datafile.
 
